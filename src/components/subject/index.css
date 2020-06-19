@@ -1,0 +1,12 @@
+.subject {
+
+}
+
+.subject__list {
+  text-align: center;
+}
+
+.subject__list__item {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
