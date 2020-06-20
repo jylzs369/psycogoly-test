@@ -1,11 +1,12 @@
 import React from 'react';
 import './index.css';
+import Question from '../question'
 
 function Whole() {
   return (
-    <div className="whole">
-      whole
-    </div>
+    <section className="whole">
+      <Question type="whole" />
+    </section>
   );
 }
 

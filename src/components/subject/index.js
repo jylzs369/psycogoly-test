@@ -16,7 +16,6 @@ function Subject() {
   return (
     <section className="subject">
       <ul className="subject__list">
-        <li><Link to="/subject/detai/48792782"></Link></li>
         {subjectItems}
       </ul>
     </section>

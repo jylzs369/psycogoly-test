@@ -1,17 +1,15 @@
 import React from 'react';
-import {
-  useParams
-} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import './index.css';
+import Question from '../question'
 
 function SubjectDetail() {
   let { id } = useParams();
-  console.log(id)
 
   return (
-    <div className="subject-detail">
-      subject detail {id}
-    </div>
+    <section className="subject-detail">
+      <Question type="subject" subjectId={id} />
+    </section>
   );
 }
 
