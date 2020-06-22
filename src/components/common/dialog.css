@@ -1,0 +1,46 @@
+.dialog-wrap {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  background: rgba(0, 0, 0, .7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s;
+}
+
+.dialog {
+  border: 1px solid #333;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.dialog--alert {
+  max-width: 40%;
+}
+
+.dialog--confirm {
+  width: 60%;
+}
+
+.dialog__body {
+  padding: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.dialog__footer {
+  display: flex;
+  border-top: 1px solid #333;
+}
+
+.dialog__footer__button {
+  flex: 1;
+  font-size: 1.4rem;
+  padding: .5rem;
+}
+
+.dialog__footer__button + .dialog__footer__button {
+  border-left: 1px solid #333;
+}
