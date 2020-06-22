@@ -17,12 +17,36 @@ a {
   text-decoration: none;
 }
 
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
 body {
   margin: 0;
   color: #333;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 1897101 */
+  src: url('//at.alicdn.com/t/font_1897101_mhsgepjbklq.eot');
+  src: url('//at.alicdn.com/t/font_1897101_mhsgepjbklq.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1897101_mhsgepjbklq.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1897101_mhsgepjbklq.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1897101_mhsgepjbklq.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1897101_mhsgepjbklq.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 1.6rem;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
