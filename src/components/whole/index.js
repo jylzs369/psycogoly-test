@@ -4,9 +4,7 @@ import Question from '../question'
 
 function Whole() {
   return (
-    <section className="whole">
-      <Question type="whole" />
-    </section>
+    <Question type="whole" />
   );
 }
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import './index.css';
 import { formatWhole, formatSubject, formatTesting } from '../../utils';
 
 import QuestionWhole from './whole';
@@ -34,9 +33,7 @@ function Question (props) {
   }
 
   return (
-    <section className="question">
-      <QuestionComponent />
-    </section>
+    <QuestionComponent />
   );
 }
 
