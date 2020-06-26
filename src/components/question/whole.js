@@ -10,9 +10,10 @@ import QuestionAnswer from './answer';
 function QuestionWhole (props) {
   const history = useHistory();
 
-  let [currentIndex, setCurrentIndex] = useState(0);
+  let hasIndex = localStorage.getItem('whole_index') - 0;
+  let [currentIndex, setCurrentIndex] = useState(hasIndex || 0);
   let [total] = useState(props.questions.length);
-  let [current, setCurrent] = useState(Object.assign({}, props.questions[0]));
+  let [current, setCurrent] = useState(Object.assign({}, props.questions[currentIndex]));
   let [showAlert, setShowAlert] = useState(false);
   let [showConfirm, setShowConfirm] = useState(false);
 
@@ -91,10 +92,16 @@ function QuestionWhole (props) {
       return
     }
     let index = currentIndex + step
-    // 更新题目的最新数据
-    props.questions[currentIndex] = current
+    updateQuestions()
     setCurrentIndex(index)
     setCurrent(Object.assign({}, props.questions[index]))
+  }
+
+  function updateQuestions () {
+    // 更新题目的最新数据
+    props.questions[currentIndex] = current
+    localStorage.setItem('whole', JSON.stringify(props.questions));
+    localStorage.setItem('whole_index', currentIndex);
   }
 
   function openAlert () {
@@ -119,6 +126,7 @@ function QuestionWhole (props) {
 
   function onQuitConfirm () {
     closeConfirm()
+    updateQuestions()
     // 跳转回首页
     history.push('/')
   }

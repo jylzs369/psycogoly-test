@@ -10,13 +10,20 @@ import answersOrigin from '../../data/psycology_answer.json';
 
 function Question (props) {
   const { type, subjectId } = props
-  let questions = []
-  let answers = []
 
   function QuestionComponent () {
+    let questions = []
+    let answers = []
     if (type === 'whole') {
-      questions = formatWhole(questionsOrigin)
-      answers = formatWhole(answersOrigin)
+      if (!localStorage.getItem('whole')) {
+        questions = formatWhole(questionsOrigin)
+        answers = formatWhole(answersOrigin)
+        localStorage.setItem('whole', JSON.stringify(questions));
+        localStorage.setItem('answers', JSON.stringify(answers));
+      } else {
+        questions = JSON.parse(localStorage.getItem('whole'));
+        answers = JSON.parse(localStorage.getItem('answers'));
+      }
       return <QuestionWhole questions={questions} answers={answers} />;
     }
     if (type === 'subject') {
