@@ -10,7 +10,7 @@ function QuestionMultiple (props) {
 
   const changeIcon = (current, answer, index) => {
     let checked = current.checked && current.checked.includes(index);
-    let correct = current.correctAnswerArr && current.correctAnswerArr.includes(answer);
+    let correct = current.correctAnswers && current.correctAnswers.includes(answer);
     if (current.over) {
       if (correct) {
         return (<i className="iconfont icon-circle-correct">&#xe708;</i>)
