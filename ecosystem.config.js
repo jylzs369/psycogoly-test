@@ -18,16 +18,16 @@ module.exports = {
     production : {
       user : 'ushio',
       host : '106.53.51.186',
-      port: 52001,
+      port: '52001',
       ref  : 'origin/master',
       repo : 'git@github.com:jylzs369/psycology-test.git',
-      path : '/www/psycology-test/production',
-      ssh_options: 'StrictHostKeyChecking=no',
+      path : '~/www/psycology-test/production',
+      ssh_options: ["StrictHostKeyChecking=no", "PasswordAuthentication=no"],
       env: {
         NODE_ENV: 'production'
       },
       'pre-deploy-local': '',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
+      'post-deploy' : 'npm install && npm run build && pm2 startOrReload ecosystem.config.js --env production',
       'pre-setup': ''
     }
   }
