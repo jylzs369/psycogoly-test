@@ -9,10 +9,10 @@ module.exports = {
     env_production: {
       NODE_ENV: 'production '
     }
-  }/* , {
+  }, {
     script: './service-worker/',
     watch: ['./service-worker']
-  } */],
+  }],
 
   deploy : {
     production : {
