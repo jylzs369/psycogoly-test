@@ -37,6 +37,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "start": "cross-env NODE_ENV=test node ./server/app.js",
+    "deploy": "pm2 deploy ecosystem.config.js production",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
