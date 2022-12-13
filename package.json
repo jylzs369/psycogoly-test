@@ -21,7 +21,7 @@
     "autoprefixer": "^9.8.0",
     "core-js": "3",
     "cross-env": "^7.0.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "koa": "^2.13.0",
     "koa-bodyparser": "^4.3.0",
     "koa-static": "^5.0.0",
